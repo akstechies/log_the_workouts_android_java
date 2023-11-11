@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log The Workouts"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <!-- Exercise -->
+        <TextView
+            android:id="@+id/textViewExercise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya"
+            android:text="Exercise"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextExercise"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextExercise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Exercise"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewExercise"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Reps -->
+        <TextView
+            android:id="@+id/textViewReps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya"
+            android:text="Reps"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextReps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextExercise" />
+
+        <EditText
+            android:id="@+id/editTextReps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Reps"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewReps"
+            app:layout_constraintTop_toBottomOf="@+id/editTextExercise" />
+
+        <!-- Weight -->
+        <TextView
+            android:id="@+id/textViewWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya"
+            android:text="Weight"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextWeight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextReps" />
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewWeight"
+            app:layout_constraintTop_toBottomOf="@+id/editTextReps" />
+
+        <!-- Duration -->
+        <TextView
+            android:id="@+id/textViewDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya"
+            android:text="Duration"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextDuration"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextWeight" />
+
+        <EditText
+            android:id="@+id/editTextDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Duration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewDuration"
+            app:layout_constraintTop_toBottomOf="@+id/editTextWeight" />
+
+        <!-- Sets -->
+        <TextView
+            android:id="@+id/textViewSets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya"
+            android:text="Sets"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextSets"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDuration" />
+
+        <EditText
+            android:id="@+id/editTextSets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Sets"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewSets"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDuration" />
+
+        <Button
+            android:id="@+id/saveWorkoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="304dp"
+            android:text="Add Workout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
